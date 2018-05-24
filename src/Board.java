@@ -113,6 +113,9 @@ public class Board extends javax.swing.JPanel {
      */
     public Board() {
         initComponents();
+        setFocusable(true);
+        requestFocusInWindow();
+        
     }
 
     public void initGame() {
@@ -127,8 +130,7 @@ public class Board extends javax.swing.JPanel {
         scoreBoard.setScoreP2(0);
         
       
-        setFocusable(true);
-        requestFocusInWindow();
+        
         if (timer != null && timer.isRunning()) {
             timer.stop();
         }
