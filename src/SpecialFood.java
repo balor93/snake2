@@ -39,7 +39,7 @@ public class SpecialFood extends Food implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent ae) {
-        
+        board.createFood();
         time.stop();
     }
     

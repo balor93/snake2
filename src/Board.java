@@ -196,6 +196,7 @@ public class Board extends javax.swing.JPanel {
                     if (snake.eats(food)) {
                         if (food instanceof SpecialFood) {
                             scoreBoard.incrementScoreP1(20);
+                            
                         } else {
                             scoreBoard.incrementScoreP1(5);
                         }
@@ -208,6 +209,7 @@ public class Board extends javax.swing.JPanel {
                     if (snake2.eats(food)) {
                         if (food instanceof SpecialFood) {
                             scoreBoard.incrementScoreP2(20);
+                            
                         } else {
                             scoreBoard.incrementScoreP2(5);
                         }
@@ -231,7 +233,7 @@ public class Board extends javax.swing.JPanel {
 
     }
 
-    private void createFood() {
+    public void createFood() {
         Random r = new Random();
         int num = r.nextInt(3);
         if (num == 0) {
@@ -393,8 +395,7 @@ public class Board extends javax.swing.JPanel {
                 tamanio.width, tamanio.height, null);
         setOpaque(false);
     }
-
-
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     // End of variables declaration//GEN-END:variables
 }
